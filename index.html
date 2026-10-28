@@ -37,6 +37,13 @@
     .note { color:var(--muted); font-size:14px; }
     .projects { display:grid; grid-template-columns:1fr; gap:25px; }
     article { padding:32px; border:1px solid var(--line); background:var(--sage); border-left:5px solid #71856a; border-radius:5px; }
+    .dashboard { margin:28px 0 0; }
+    .dashboard img { display:block; width:100%; height:auto; background:var(--white); border:1px solid var(--line); border-radius:4px; }
+    .dashboard a { display:block; }
+    figcaption { font-size:14px; color:var(--muted); margin-top:10px; }
+    .dashboard-more { margin-top:24px; border-top:1px solid var(--line); padding-top:18px; }
+    summary { cursor:pointer; font-weight:650; }
+    summary:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
     .number { font-size:13px; color:var(--accent); font-weight:700; }
     h3 { font-size:30px; margin:25px 0 15px; }
     article p { color:var(--muted); }
@@ -85,6 +92,7 @@
           <h3>Chinook Returns &amp; Water Chemistry: Comparing the Columbia and Willamette Rivers</h3>
           <p>An analysis of Chinook salmon returns and water chemistry measurements across both rivers in the Portland, Oregon metro area.</p>
           <ul class="tags" aria-label="Project tools"><li>Python</li><li>Excel</li><li>Tableau</li></ul>
+<figure class="dashboard"><a href="assets/chinook-returns.png" target="_blank" rel="noopener" aria-label="Open Chinook returns comparison dashboard at full size"><img src="assets/chinook-returns.png" alt="Chinook returns comparison dashboard" loading="lazy"></a><figcaption>Chinook returns at Bonneville Dam and Willamette Falls, with historical trends. <span class="note">Select image to view full size.</span></figcaption></figure><details class="dashboard-more"><summary>More dashboard views</summary><figure class="dashboard"><a href="assets/study-area.png" target="_blank" rel="noopener" aria-label="Open Portland area sampling sites map at full size"><img src="assets/study-area.png" alt="Portland area sampling sites map" loading="lazy"></a><figcaption>Study area and sampling locations across the Columbia and Willamette rivers. <span class="note">Select image to view full size.</span></figcaption></figure><figure class="dashboard"><a href="assets/columbia-chemistry.png" target="_blank" rel="noopener" aria-label="Open Columbia River water chemistry dashboard at full size"><img src="assets/columbia-chemistry.png" alt="Columbia River water chemistry dashboard" loading="lazy"></a><figcaption>Dissolved oxygen and temperature measurements at two Columbia River locations. <span class="note">Select image to view full size.</span></figcaption></figure><figure class="dashboard"><a href="assets/statistical-analysis.png" target="_blank" rel="noopener" aria-label="Open Water quality and Chinook returns statistical dashboard at full size"><img src="assets/statistical-analysis.png" alt="Water quality and Chinook returns statistical dashboard" loading="lazy"></a><figcaption>Water quality index trends and statistical comparisons with Chinook returns. <span class="note">Select image to view full size.</span></figcaption></figure></details>
           <p class="status"><a href="https://public.tableau.com/app/profile/chessa.mitchell/viz/CM_Capstone_Salmon_dashboard/Homepage">View interactive salmon dashboard ↗</a><br>Written case study coming soon.</p>
         </article>
       </div>
