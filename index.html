@@ -7,7 +7,7 @@
   <title>Chessa Mitchell | Data Analytics Portfolio</title>
   <style>
     /* Design settings: change these colors to update the whole page. */
-    :root { --paper:#f7f6ef; --ink:#203b33; --muted:#52675e; --line:#cdd5ca; --accent:#c65c3b; --white:#fffef9; }
+    :root { --paper:#f7f6ef; --ink:#203b33; --muted:#52675e; --line:#cdd5ca; --accent:#9b4e35; --white:#fffef9; --sage:#e5ecdf; --sand:#eee4d4; --clay:#f0ded3; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.7 system-ui,sans-serif; }
@@ -17,12 +17,14 @@
     .wrap { width:min(1100px,90%); margin:auto; }
     .skip { position:absolute; top:-100px; background:var(--white); padding:10px; }
     .skip:focus { top:10px; }
-    header { border-bottom:1px solid var(--line); }
+    header { border-bottom:1px solid var(--line); background:var(--sage); }
     nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 0; }
     .name { font-weight:750; text-decoration:none; }
     .links { display:flex; gap:26px; font-size:14px; }
     .links a { text-decoration:none; }
+    .links a:hover { color:var(--accent); }
     .hero { padding:95px 0 85px; max-width:850px; }
+    .hero::before { content:""; display:block; width:90px; height:7px; border-radius:5px; background:linear-gradient(to right,#71856a 0 34%,#b7785e 34% 67%,#c6b393 67%); margin-bottom:28px; }
     .eyebrow { font-size:12px; font-weight:750; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
     h1,h2,h3 { font-family:Georgia,serif; font-weight:400; line-height:1.1; }
     h1 { font-size:clamp(48px,7.5vw,88px); letter-spacing:-3px; margin:24px 0; }
@@ -34,18 +36,21 @@
     .section-top { display:flex; justify-content:space-between; align-items:baseline; gap:20px; }
     .note { color:var(--muted); font-size:14px; }
     .projects { display:grid; grid-template-columns:1fr; gap:25px; }
-    article { padding:32px; border:1px solid var(--line); background:var(--white); border-radius:5px; }
+    article { padding:32px; border:1px solid var(--line); background:var(--sage); border-left:5px solid #71856a; border-radius:5px; }
     .number { font-size:13px; color:var(--accent); font-weight:700; }
     h3 { font-size:30px; margin:25px 0 15px; }
     article p { color:var(--muted); }
     .tags { display:flex; flex-wrap:wrap; gap:8px; padding:0; list-style:none; font-size:12px; }
-    .tags li { border:1px solid var(--line); padding:3px 10px; border-radius:20px; }
+    .tags li { border:1px solid #bdc9b6; padding:3px 10px; border-radius:20px; background:var(--white); }
     .status { font-size:13px; border-top:1px solid var(--line); margin-top:26px; padding-top:16px; }
     .about { display:grid; grid-template-columns:1fr 1.5fr; gap:60px; }
     .about p { margin-top:0; color:var(--muted); }
     .skills { display:flex; flex-wrap:wrap; gap:12px; list-style:none; padding:0; }
-    .skills li { padding:9px 18px; background:#e5eade; border-radius:3px; }
-    footer { padding:25px 0; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    .skills li { padding:9px 18px; background:var(--sage); border-radius:3px; }
+    .skills li:nth-child(3n + 2) { background:var(--sand); }
+    .skills li:nth-child(3n) { background:var(--clay); }
+    #connect { background:var(--sand); padding:38px; border:0; border-radius:5px; margin-bottom:45px; }
+    footer { padding:25px 0; background:var(--sage); border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
     @media(max-width:650px) {
       nav { align-items:flex-start; flex-direction:column; gap:12px; }
       .links { gap:22px; } .hero { padding:55px 0; }
