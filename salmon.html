@@ -105,12 +105,18 @@
 </tbody></table></div>
 <figure class="dashboard"><a href="assets/study-area.png" target="_blank" rel="noopener"><img src="assets/study-area.png" alt="Map of Portland-area fish counting and water sampling locations" loading="lazy"></a><figcaption>Dashboard map showing the study area and sampling locations. Select image to view full size.</figcaption></figure>
 </section>
-<section aria-labelledby="methods"><p class="eyebrow">Technical approach</p><h2 id="methods">From source tables to interactive views.</h2><ol class="case-copy">
-<li><strong>Inspect and clean.</strong> Used Pandas to inspect data types, missing values, and species counts; filtered the water quality data to four stations and checked the resulting records.</li>
-<li><strong>Aggregate and compare.</strong> Calculated yearly means for water measurements and index scores. Compared yearly Chinook returns over shared years to examine whether the two locations followed similar patterns. Constructed a baseline index to compare relative change alongside the original counts.</li>
-<li><strong>Explore trends.</strong> Used summary statistics, histograms, line charts, trend lines, and correlation analysis to investigate variation and relationships.</li>
-<li><strong>Prepare and visualize.</strong> Exported analysis tables to CSV, assembled latitude and longitude data for mapping, and built Tableau dashboards with location and year filters.</li>
-</ol></section>
+<section aria-labelledby="methods"><p class="eyebrow">Technical approach</p><h2 id="methods">Six steps from question to insight.</h2>
+<p class="case-copy">This case study is organized around the six phases taught by Google: Ask, Prepare, Process, Analyze, Share, and Act. Analysis is iterative; questions and data checks can be revisited as findings develop.</p>
+<ol class="case-copy analytics-steps">
+<li><strong>Ask — Define the question.</strong> Investigated how urban water quality near Portland relates to Chinook return trends in the Columbia and Willamette rivers, with comparisons across locations and years.</li>
+<li><strong>Prepare — Gather relevant data.</strong> Brought together government and regulatory water quality records and historical fish counts. Selected fish counting locations, four water sampling stations, and shared years for comparison.</li>
+<li><strong>Process — Clean and organize.</strong> Used Pandas to inspect data types and missing values, filter species and stations, and check the resulting records. Prepared yearly summaries, CSV exports, and coordinates for Tableau mapping.</li>
+<li><strong>Analyze — Compare patterns and relationships.</strong> Compared 10-year average returns and species proportions to select Chinook. Used summary statistics, time-series visualizations, trend lines, correlation analysis, and a baseline index to examine yearly patterns, long-term trends, and relative changes. Explored annual water chemistry measurements and water quality index scores alongside returns.</li>
+<li><strong>Share — Communicate the findings.</strong> Built interactive Tableau dashboards with maps, charts, and location and year filters. Presented the analysis with explanations of methods, observations, and limitations.</li>
+<li><strong>Act — Identify next steps.</strong> Proposed further analysis of individual chemistry measurements and migration timing, with verification of source coverage and sampling methods. These are recommendations for follow-up; no policy or management intervention was implemented as part of this capstone.</li>
+</ol>
+<p class="note">Framework reference: <a href="https://www.coursera.org/learn/google-introducing-data-analytics-and-analytical-thinking">Google Career Certificates — Introducing Data Analytics and Analytical Thinking</a>. See also the <a href="https://www.csps-efpc.gc.ca/tools/articles/data-decision-making-eng.aspx">Canada School of Public Service guide to data-driven decision-making</a>.</p>
+</section>
 <section aria-labelledby="findings"><p class="eyebrow">Dashboard observations</p><h2 id="findings">Different trends across locations.</h2>
 <div class="case-copy"><p><strong>Returns vary substantially by site and year.</strong> In the shared-period dashboard, Bonneville has much larger counts and an upward fitted trend, while Willamette Falls has a downward fitted trend. These are site-level passage counts; the difference in scale alone does not establish which river has a healthier population.</p></div>
 <figure class="dashboard"><a href="assets/chinook-returns.png" target="_blank" rel="noopener"><img src="assets/chinook-returns.png" alt="Historical Chinook returns at Bonneville Dam and Willamette Falls" loading="lazy"></a><figcaption>Historical counts and fitted trends shown in the Tableau dashboard. Select image to view full size.</figcaption></figure>
