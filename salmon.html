@@ -65,7 +65,11 @@
       .section-top { display:block; } article { padding:25px; } section { padding:40px 0; }
     }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-  .case-title { font-size:clamp(36px,5vw,60px); letter-spacing:-1.5px; } .case-copy { max-width:780px; } .case-copy p,.case-copy li { color:var(--muted); } .case-copy li { margin-bottom:12px; } .case-hero { padding:55px 0; } .case-hero .intro { max-width:780px; } .case-table { width:100%; border-collapse:collapse; font-size:15px; } .case-table th,.case-table td { padding:15px 12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; } .case-table th { background:var(--sage); } .table-scroll { overflow-x:auto; } </style>
+  .case-title { font-size:clamp(36px,5vw,60px); letter-spacing:-1.5px; } .case-copy { max-width:780px; } .case-copy p,.case-copy li { color:var(--muted); } .case-copy li { margin-bottom:12px; } .case-hero { padding:55px 0; } .case-hero .intro { max-width:780px; } .case-table { width:100%; border-collapse:collapse; font-size:15px; } .case-table th,.case-table td { padding:15px 12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; } .case-table th { background:var(--sage); } .table-scroll { overflow-x:auto; } 
+    .technical-skills { max-width:780px; margin:28px 0 8px; padding:20px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .technical-skills h2 { margin:0 0 12px; font-family:inherit; font-size:13px; font-weight:700; line-height:1.5; letter-spacing:.04em; color:var(--muted); }
+    .technical-skills-list { display:flex; flex-wrap:wrap; gap:8px 28px; margin:0; padding:0; list-style:none; font-size:16px; line-height:1.6; color:var(--ink); }
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -74,7 +78,10 @@
 <div class="case-hero"><a href="index.html#projects">← Back to projects</a><p class="eyebrow">Environmental data analysis · Capstone</p>
 <h1 class="case-title">Analyzing Pacific Chinook Salmon Returns &amp; Water Quality Measurements near Portland Oregon: Comparing the Columbia and Willamette Rivers</h1>
 <p class="intro">An analysis of Chinook salmon returns and water chemistry measurements across two rivers-- Willamette River, Columbia River, near Portland, Oregon metro area.</p>
-<ul class="tags" aria-label="Project tools"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Excel</li><li>Tableau</li></ul>
+<section class="technical-skills" aria-labelledby="technical-skills-heading">
+  <h2 id="technical-skills-heading">Technical skills</h2>
+  <ul class="technical-skills-list"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Excel</li><li>Tableau</li></ul>
+</section>
 <a class="button" href="https://public.tableau.com/app/profile/chessa.mitchell/viz/CM_Capstone_Salmon_dashboard/Homepage">Explore the interactive dashboard ↗</a></div>
 <section aria-labelledby="question"><p class="eyebrow">The question</p><h2 id="question">What can local data reveal about Chinook decline?</h2><div class="case-copy"><p>I investigated the decline of Pacific Chinook salmon populations near Portland, Oregon. I used government and water quality regulatory data, including U.S. Army Corps of Engineers dam records, to compare historical returns and explore potential relationships with local water conditions. The analysis focused on Bonneville Dam and Willamette Falls, alongside four Portland-area water sampling sites.</p></div></section>
 <section aria-labelledby="data"><p class="eyebrow">Data &amp; scope</p><h2 id="data">Two counting sites. Four sampling locations.</h2>
