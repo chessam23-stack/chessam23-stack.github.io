@@ -52,6 +52,8 @@
     .tags li { border:1px solid #bdc9b6; padding:3px 10px; border-radius:20px; background:var(--white); }
     .status { font-size:13px; border-top:1px solid var(--line); margin-top:26px; padding-top:16px; }
     .about { display:grid; grid-template-columns:1fr 1.5fr; gap:60px; }
+    .about-copy { display:flow-root; }
+    .about-headshot { float:left; width:clamp(135px,34%,220px); height:auto; margin:0 22px 12px 0; border-radius:6px; }
     .about p { margin-top:0; color:var(--muted); }
     .skills { display:flex; flex-wrap:wrap; gap:12px; list-style:none; padding:0; }
     .skills li { padding:9px 18px; background:var(--sage); border-radius:3px; }
@@ -63,6 +65,7 @@
       nav { align-items:flex-start; flex-direction:column; gap:12px; }
       .links { gap:22px; } .hero { padding:55px 0; }
       h1 { letter-spacing:-1.5px; } .projects,.about { grid-template-columns:1fr; gap:20px; }
+      .about-headshot { float:none; display:block; width:min(220px,70%); margin:0 0 20px; }
       .section-top { display:block; } article { padding:25px; } section { padding:40px 0; }
     }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
@@ -107,7 +110,7 @@
     </section>
     <section id="about" class="about" aria-labelledby="about-heading">
       <div><p class="eyebrow">Technical skills &amp; approach</p><h2 id="about-heading">Technical tools.<br>Thoughtful analysis.</h2></div>
-      <div><p>My toolkit includes Python, SQL, Excel, and Tableau. I use these tools to work with data, investigate relationships, and communicate patterns through analysis and visualization.</p><p>Creativity helps me approach questions from different angles. Critical thinking guides how I evaluate evidence, question assumptions, and interpret results. My projects bring these strengths together through practical data analysis and clear visual storytelling.</p><ul class="skills" aria-label="Skills"><li>Excel</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Data visualization</li></ul></div>
+      <div class="about-copy"><img class="about-headshot" src="assets/chessa-mitchell.webp" alt="Chessa Mitchell" width="560" height="560" loading="lazy"><p>My toolkit includes Python, SQL, Excel, and Tableau. I use these tools to work with data, investigate relationships, and communicate patterns through analysis and visualization.</p><p>Creativity helps me approach questions from different angles. Critical thinking guides how I evaluate evidence, question assumptions, and interpret results. My projects bring these strengths together through practical data analysis and clear visual storytelling.</p><ul class="skills" aria-label="Skills"><li>Excel</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Data visualization</li></ul></div>
     </section>
     <section id="outside-work" aria-labelledby="outside-work-heading">
       <h2 id="outside-work-heading">Outside of work</h2>
