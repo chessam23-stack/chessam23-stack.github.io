@@ -1,128 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- Refresh portfolio deployment -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chessa Mitchell's data analytics portfolio, showcasing technical skills, creative problem-solving, critical thinking, and data visualization.">
-  <title>Chessa Mitchell | Data Analytics Portfolio</title>
-  <style>
-    /* Design settings: change these colors to update the whole page. */
-    :root { --paper:#f7f6ef; --ink:#203b33; --muted:#52675e; --line:#cdd5ca; --accent:#9b4e35; --white:#fffef9; --sage:#e5ecdf; --sand:#eee4d4; --clay:#f0ded3; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.7 system-ui,sans-serif; }
-    a { color:inherit; text-underline-offset:5px; }
-    a:hover { text-decoration-thickness:2px; }
-    a:focus-visible { outline:3px solid var(--accent); outline-offset:6px; }
-    .wrap { width:min(1100px,90%); margin:auto; }
-    .skip { position:absolute; top:-100px; background:var(--white); padding:10px; }
-    .skip:focus { top:10px; }
-    header { border-bottom:1px solid var(--line); background:var(--sage); }
-    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 0; }
-    .name { font-weight:750; text-decoration:none; }
-    .links { display:flex; gap:26px; font-size:14px; }
-    .links a { text-decoration:none; }
-    .links a:hover { color:var(--accent); }
-    .hero { padding:95px 0 85px; max-width:850px; }
-    .hero::before { content:""; display:block; width:90px; height:7px; border-radius:5px; background:linear-gradient(to right,#71856a 0 34%,#b7785e 34% 67%,#c6b393 67%); margin-bottom:28px; }
-    .eyebrow { font-size:12px; font-weight:750; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
-    h1,h2,h3 { font-family:Georgia,serif; font-weight:400; line-height:1.1; }
-    h1 { font-size:clamp(48px,7.5vw,88px); letter-spacing:-3px; margin:24px 0; }
-    h1 em { color:var(--accent); font-weight:400; }
-    .intro { max-width:650px; font-size:20px; color:var(--muted); }
-    .button { display:inline-block; padding:12px 22px; background:var(--ink); color:var(--white); text-decoration:none; margin-top:18px; border-radius:3px; }
-    section { padding:55px 0; border-top:1px solid var(--line); scroll-margin-top:20px; }
-    h2 { font-size:40px; margin:12px 0 28px; letter-spacing:-1px; }
-    .section-top { display:flex; justify-content:space-between; align-items:baseline; gap:20px; }
-    .note { color:var(--muted); font-size:14px; }
-    .projects { display:grid; grid-template-columns:1fr; gap:25px; }
-    article { padding:32px; border:1px solid var(--line); background:var(--sage); border-left:5px solid #71856a; border-radius:5px; }
-    .dashboard { margin:28px 0 0; }
-    .dashboard img { display:block; width:100%; height:auto; background:var(--white); border:1px solid var(--line); border-radius:4px; }
-    .dashboard a { display:block; }
-    figcaption { font-size:14px; color:var(--muted); margin-top:10px; }
-    .dashboard-more { margin-top:24px; border-top:1px solid var(--line); padding-top:18px; }
-    summary { cursor:pointer; font-weight:650; }
-    summary:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
-    .number { font-size:13px; color:var(--accent); font-weight:700; }
-    h3 { font-size:30px; margin:25px 0 15px; }
-    article p { color:var(--muted); }
-    .tags { display:flex; flex-wrap:wrap; gap:8px; padding:0; list-style:none; font-size:12px; }
-    .tags li { border:1px solid #bdc9b6; padding:3px 10px; border-radius:20px; background:var(--white); }
-    .status { font-size:13px; border-top:1px solid var(--line); margin-top:26px; padding-top:16px; }
-    .about { display:grid; grid-template-columns:1fr 1.5fr; gap:60px; }
-    .about-copy { display:flow-root; }
-    .about-headshot { float:left; width:clamp(135px,34%,220px); height:auto; margin:0 22px 12px 0; border-radius:6px; }
-    .about p { margin-top:0; color:var(--muted); }
-    .skills { display:flex; flex-wrap:wrap; gap:12px; list-style:none; padding:0; }
-    .skills li { padding:9px 18px; background:var(--sage); border-radius:3px; }
-    .skills li:nth-child(3n + 2) { background:var(--sand); }
-    .skills li:nth-child(3n) { background:var(--clay); }
-    #connect { background:var(--sand); padding:38px; border:0; border-radius:5px; margin-bottom:45px; }
-    footer { padding:25px 0; background:var(--sage); border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
-    @media(max-width:650px) {
-      nav { align-items:flex-start; flex-direction:column; gap:12px; }
-      .links { gap:22px; } .hero { padding:55px 0; }
-      h1 { letter-spacing:-1.5px; } .projects,.about { grid-template-columns:1fr; gap:20px; }
-      .about-headshot { float:none; display:block; width:min(220px,70%); margin:0 0 20px; }
-      .section-top { display:block; } article { padding:25px; } section { padding:40px 0; }
-    }
-    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-  </style>
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header>
-    <nav class="wrap" aria-label="Main navigation">
-      <a class="name" href="#main">Chessa Mitchell<span aria-hidden="true"> ↗</span></a>
-      <div class="links"><a href="#projects">Projects</a><a href="#about">About</a><a href="#connect">Connect</a></div>
-    </nav>
-  </header>
-  <main id="main" class="wrap">
-    <!-- The hero introduces who you are and the focus of your work. -->
-    <div class="hero">
-      <p class="eyebrow">Data analytics · Creative problem-solving · Portland, Oregon</p>
-      <h1>Creative thinking.<br><em>Analytical insight.</em></h1>
-      <p class="intro">I'm Chessa, a data analyst with a creative approach to problem-solving and a critical eye for evidence. I use Python, SQL, Excel, and Tableau to investigate questions, test assumptions, and build clear visualizations.</p>
-      <a class="button" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
-    </div>
-    <!-- Project summaries are drafts, not claims of completed findings. -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <div class="section-top"><div><p class="eyebrow">Questions worth exploring</p><h2 id="projects-heading">Featured projects</h2></div><p class="note">Portfolio in development</p></div>
-      <div class="projects">
-        <article>
-          <span class="number">01 / ENVIRONMENT</span>
-          <h3>Chinook Returns &amp; Water Chemistry: Comparing the Columbia and Willamette Rivers</h3>
-          <p>An analysis of Chinook salmon returns and water chemistry measurements across both rivers in the Portland, Oregon metro area.</p>
-          <ul class="tags" aria-label="Project tools"><li>Python</li><li>Excel</li><li>Tableau</li></ul>
-<figure class="dashboard"><a href="assets/chinook-returns.png" target="_blank" rel="noopener" aria-label="Open Chinook returns comparison dashboard at full size"><img src="assets/chinook-returns.png" alt="Chinook returns comparison dashboard" loading="lazy"></a><figcaption>Chinook returns at Bonneville Dam and Willamette Falls, with historical trends. <span class="note">Select image to view full size.</span></figcaption></figure>
-          <p class="status"><a href="https://public.tableau.com/app/profile/chessa.mitchell/viz/CM_Capstone_Salmon_dashboard_final/SalmonSpeciesComparisonPart1">View interactive salmon dashboard ↗</a> &nbsp; / &nbsp; <a href="salmon.html">View project case study →</a></p>
-        </article>
-        <article>
-          <span class="number">02 / BUSINESS ANALYTICS</span>
-          <h3>E-Commerce Business Performance Dashboard</h3>
-          <p>I built an interactive Excel dashboard to evaluate sales, profitability, and warehouse efficiency using a fictional dataset. I compared revenue across regions and used monthly totals and per-sale averages to see how business performance changed depending on the measure.</p>
-          <ul class="tags" aria-label="Project tools"><li>Microsoft Excel</li><li>PivotTables</li><li>Data visualization</li></ul>
-          <p class="status"><a href="excel.html">View Excel case study →</a></p>
-        </article>
-      </div>
-    </section>
-    <section id="about" class="about" aria-labelledby="about-heading">
-      <div><p class="eyebrow">Technical skills &amp; approach</p><h2 id="about-heading">Technical tools.<br>Thoughtful analysis.</h2></div>
-      <div class="about-copy"><img class="about-headshot" src="assets/chessa-mitchell.webp" alt="Chessa Mitchell" width="560" height="560" loading="lazy"><p>My toolkit includes Python, SQL, Excel, and Tableau. I use these tools to work with data, investigate relationships, and communicate patterns through analysis and visualization.</p><p>Creativity helps me approach questions from different angles. Critical thinking guides how I evaluate evidence, question assumptions, and interpret results. My projects bring these strengths together through practical data analysis and clear visual storytelling.</p><ul class="skills" aria-label="Skills"><li>Excel</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Data visualization</li></ul></div>
-    </section>
-    <section id="outside-work" aria-labelledby="outside-work-heading">
-      <h2 id="outside-work-heading">Outside of work</h2>
-      <p>I grew up in Bayfield, Wisconsin, on the shores of Lake Superior. Growing up beside that clear, expansive lake inspired me to study biology and pursue work that helps protect the natural places and resources we depend on.</p>
-      <p>Outside of work, I enjoy gardening, playing board games and Dungeons &amp; Dragons, and learning new things.</p>
-    </section>
-    <section id="connect" aria-labelledby="connect-heading">
-      <p class="eyebrow">Keep in touch</p><h2 id="connect-heading">Let's connect.</h2>
-      <p>Find my professional background on LinkedIn and follow my project work on GitHub.</p>
-      <p><a href="https://www.linkedin.com/in/chessa-mitchell">LinkedIn <span aria-hidden="true">↗</span></a> &nbsp; / &nbsp; <a href="https://github.com/chessam23-stack">GitHub <span aria-hidden="true">↗</span></a></p>
-    </section>
-  </main>
-  <footer><div class="wrap">Chessa Mitchell · Data analytics portfolio</div></footer>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Chessa Mitchell — Data Analyst. Python, SQL, Excel, Tableau. Technical project portfolio."><title>Chessa Mitchell | Data Analyst</title>
+<style>
+:root{--green:#213e34;--cream:#f8f6f0;--sage:#e7ede3;--peach:#efbea6;--ink:#253f35;--muted:#53665c;--line:#cdd7cb;--rust:#a34e31}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font:17px/1.7 system-ui,-apple-system,Arial,sans-serif}a{color:inherit;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid var(--rust);outline-offset:4px}.wrap{width:min(1380px,90%);margin:auto}h1,h2,h3{font-family:Georgia,serif;letter-spacing:-.035em;line-height:1.12}h2{font-size:clamp(32px,3.1vw,47px);font-weight:400;margin:10px 0 26px}header{background:var(--cream)}nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:30px}.brand{font-size:20px;font-weight:750;text-decoration:none;display:flex;align-items:center;gap:12px}.mark{width:42px;height:42px;border-radius:9px;background:var(--green);display:grid;place-items:center;color:var(--peach)}.links{display:flex;align-items:center;gap:38px;font-weight:700}.links a{text-decoration:none}.links .resume{border:1px solid #a5b3a8;border-radius:6px;padding:8px 16px}.hero{background:var(--green);color:var(--cream);padding:70px 0 74px}.hero-inner{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(240px,.8fr);gap:8%;align-items:center}.location,.eyebrow{font-size:13px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}.location{color:#d7e3d8}.location:before{content:"●";color:var(--peach);margin-right:12px}.hero h1{font-size:clamp(50px,5vw,76px);font-weight:400;margin:20px 0 0}.hero h1 span{display:block;color:var(--peach);font-size:.69em;margin-top:7px}.tagline{font-style:italic;font-size:18px;margin:20px 0 12px}.hero p{max-width:750px}.hero-copy{font-size:18px;line-height:1.73}.hero-copy strong{color:#fff}.stack{font-weight:750}.actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:20px}.primary{display:inline-block;background:var(--peach);color:var(--green);padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:750}.secondary{font-weight:700}.hero-graphic{width:100%;max-width:350px;justify-self:center}.projects-section{padding:64px 0 82px}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.project{border:1px solid var(--line);border-radius:10px;background:#fffdf8;overflow:hidden;display:flex;flex-direction:column}.project-art{height:190px;background:var(--sage);padding:20px;display:grid;place-items:center}.project-art img{max-width:100%;max-height:100%;object-fit:contain;border:1px solid #b5c8b8;border-radius:4px}.project:nth-child(2) .project-art{background:#e2edf0}.project-body{padding:30px;display:flex;flex-direction:column;flex:1}.project-label{font-size:12px;letter-spacing:.13em;font-weight:800;color:var(--rust)}.project-label .num{color:var(--muted);margin-right:12px}.project h3{font-size:clamp(25px,2.3vw,34px);font-weight:400;margin:15px 0}.project .finding{font-weight:750;font-size:18px;line-height:1.6;margin:0 0 10px}.project .desc{color:var(--muted);margin:0 0 16px}.tags{display:flex;gap:7px;flex-wrap:wrap;padding:0;list-style:none;margin:0 0 22px}.tags li{background:var(--sage);border:1px solid var(--line);border-radius:40px;padding:4px 12px;font-size:13px;font-weight:700}.project-links{margin-top:auto;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;font-weight:750}.project-links .minor{font-weight:650;color:var(--muted)}.code-art{width:100%;background:#fffdf8;border:2px solid #a7bca9;border-radius:10px;padding:18px 16px;color:var(--green);font:clamp(11px,1.3vw,17px)/1.8 ui-monospace,SFMono-Regular,Consolas,monospace}.dots{display:flex;gap:7px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}.dots i{width:8px;height:8px;border-radius:50%;background:#b4c4b7}.dots i:first-child{background:#a45b45}.about-section{background:var(--sage);padding:72px 0}.about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:9%;align-items:start}.eyebrow{color:var(--rust)}.about-text{font-size:18px;color:var(--muted)}.headshot{float:left;width:210px;max-width:40%;height:auto;margin:0 24px 16px 0;border:2px solid #a8b9b2;border-radius:8px}.about-text p{margin:0 0 22px}.skills-card{background:#fffdf8;border:1px solid var(--line);border-radius:10px;padding:28px 32px}.skills-card h3{font-size:32px;font-weight:400;margin:0 0 18px}.skill-row{display:grid;grid-template-columns:35% 1fr;gap:15px;border-bottom:1px solid var(--line);padding:14px 0}.skill-row strong{color:var(--ink)}.skill-row span{color:var(--muted)}details{margin-top:18px}summary{font-weight:750;cursor:pointer}.outside{border-top:1px solid var(--line);margin-top:55px;padding-top:25px;display:grid;grid-template-columns:1.6fr 1fr;gap:10%;align-items:start}.outside h3{font-size:32px;font-weight:400;margin:0 0 12px}.outside p{font-size:18px;color:var(--muted);margin:0 0 12px}.outside img{max-width:100%;max-height:270px;border-radius:8px;object-fit:cover}.contact-section{padding:70px 0}.contact-box{background:#f0e5d4;border-radius:12px;padding:45px;display:flex;justify-content:space-between;gap:30px;align-items:center}.contact-box h2{margin:10px 0}.contact-box p{margin:0;color:var(--muted)}.contact-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;font-weight:750}.contact-links .primary{background:var(--green);color:#fff}footer{padding:20px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}@media(max-width:900px){.project-grid{grid-template-columns:1fr 1fr}.hero-inner,.about-grid{grid-template-columns:1fr}.hero-graphic{display:none}.links{gap:14px}}@media(max-width:650px){nav{align-items:flex-start;flex-direction:column}.links{flex-wrap:wrap}.project-grid,.outside{grid-template-columns:1fr}.hero{padding:45px 0}.project-art{height:180px}.about-section{padding:50px 0}.contact-box{flex-direction:column;align-items:flex-start}.headshot{width:150px}.hero h1{font-size:52px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="#top"><span class="mark" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 30 30"><polyline points="3,23 11,14 17,18 26,7" fill="none" stroke="#efbea6" stroke-width="2.5"/><circle cx="3" cy="23" r="2" fill="#efbea6"/><circle cx="11" cy="14" r="2" fill="#efbea6"/><circle cx="17" cy="18" r="2" fill="#efbea6"/><circle cx="26" cy="7" r="2" fill="#efbea6"/></svg></span>Chessa Mitchell</a><div class="links"><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a><a class="resume" href="resume.html">Résumé ↗</a></div></nav></header>
+<main id="top"><section class="hero"><div class="wrap hero-inner"><div><div class="location">Portland, Oregon</div><h1>Chessa Mitchell<span>Data Analyst</span></h1><p class="tagline">Creative thinking. Analytical insights.</p><p class="hero-copy"><strong>What does the data support, and what questions remain?</strong> As an analyst, I draw on my background in science to test assumptions and examine data from different perspectives. I check raw data for errors, clean and filter it, and use aggregations to find patterns. Then I drill down to see where those patterns hold and where they change. I translate complex findings into clear, engaging explanations and use the evidence to recommend practical next steps.</p><p class="stack">Python · SQL · Excel · Tableau</p><div class="actions"><a class="primary" href="#projects">Explore my projects ↓</a><a class="secondary" href="resume.html">View résumé ↗</a></div></div><svg class="hero-graphic" viewBox="0 0 350 300" role="img" aria-label="Decorative data line chart"><defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#577164" stroke-width=".7"/></pattern></defs><rect x="3" y="3" width="344" height="294" fill="url(#grid)" stroke="#80988a"/><g fill="none" stroke="#6f9480" stroke-width="1.1" opacity=".7"><path d="M3 235Q100 164 180 196T347 160"/><path d="M3 252Q100 181 180 213T347 177"/><path d="M3 269Q100 198 180 230T347 194"/><path d="M3 286Q100 215 180 247T347 211"/></g><polyline points="28,195 76,160 125,176 174,118 223,135 273,72 322,87" fill="none" stroke="#efbea6" stroke-width="2"/><g fill="#efbea6"><circle cx="28" cy="195" r="4"/><circle cx="76" cy="160" r="4"/><circle cx="125" cy="176" r="4"/><circle cx="174" cy="118" r="4"/><circle cx="223" cy="135" r="4"/><circle cx="273" cy="72" r="4"/><circle cx="322" cy="87" r="4"/></g></svg></div></section>
+<section class="projects-section" id="projects"><div class="wrap"><h2>Technical Project Portfolio</h2><div class="project-grid">
+<article class="project"><div class="project-art"><img src="assets/chinook-returns.png" alt="Line chart comparing Chinook salmon returns at Bonneville Dam and Willamette Falls"></div><div class="project-body"><div class="project-label"><span class="num">01</span>PYTHON ANALYSIS · TABLEAU</div><h3>Chinook Salmon Returns &amp; Water Quality</h3><p class="finding">Annual water chemistry showed no clear relationship with Chinook returns in this analysis.</p><p class="desc">I compared salmon returns and water quality in the Columbia and Willamette rivers.</p><ul class="tags"><li>Python</li><li>Excel</li><li>Tableau</li></ul><div class="project-links"><a href="salmon.html">Read salmon case study →</a><a class="minor" href="https://public.tableau.com/app/profile/chessa.mitchell/viz/CM_Capstone_Salmon_dashboard_final/SalmonSpeciesComparisonPart1">Open in Tableau ↗</a></div></div></article>
+<article class="project"><div class="project-art"><svg viewBox="0 0 410 160" width="100%" role="img" aria-label="Illustrative revenue by region bar chart"><rect width="410" height="160" fill="#fff"/><text x="205" y="18" font-size="13" font-weight="bold" text-anchor="middle" fill="#263e35">Total Revenue by Region</text><g stroke="#dce4e3" stroke-width="1"><path d="M35 35H398M35 65H398M35 95H398M35 125H398"/></g><g fill="#bad5d9" stroke="#648e98"><rect x="48" y="107" width="18" height="28"/><rect x="85" y="123" width="18" height="12"/><rect x="122" y="43" width="18" height="92"/><rect x="159" y="113" width="18" height="22"/><rect x="196" y="92" width="18" height="43"/><rect x="233" y="116" width="18" height="19"/><rect x="270" y="78" width="18" height="57"/><rect x="307" y="87" width="18" height="48"/><rect x="344" y="66" width="18" height="69"/></g></svg></div><div class="project-body"><div class="project-label"><span class="num">02</span>BUSINESS INTELLIGENCE · EXCEL</div><h3>E-Commerce Business Performance Dashboard</h3><p class="finding">Central generated 24.4× the Caribbean's purchase revenue.</p><p class="desc">I built an Excel dashboard to compare regional revenue, track monthly sales and profit, and examine time to shipment.</p><ul class="tags"><li>Excel</li><li>Power Query</li><li>PivotTables</li></ul><div class="project-links"><a href="excel.html">Read Excel case study →</a></div></div></article>
+<article class="project"><div class="project-art"><div class="code-art"><div class="dots"><i></i><i></i><i></i></div>SELECT MANAGER_ID, COUNT(*)<br>FROM emp_record_table<br>GROUP BY MANAGER_ID;</div></div><div class="project-body"><div class="project-label"><span class="num">03</span>SQL REPORTING · MYSQL WORKBENCH</div><h3>Employee Performance Mapping</h3><p class="finding">The reporting query showed the president listed as their own manager.</p><p class="desc">I built reports on employee ratings, pay, and reporting lines for a simulated data science startup.</p><ul class="tags"><li>MySQL</li><li>JOINs</li><li>Window functions</li></ul><div class="project-links"><a href="sql.html">Read SQL case study →</a></div></div></article>
+</div></div></section>
+<section class="about-section" id="about"><div class="wrap"><div class="about-grid"><div><div class="eyebrow">About me</div><h2>Science, education, and data analysis</h2><div class="about-text"><img class="headshot" src="assets/chessa-mitchell.webp" alt="Professional portrait of Chessa Mitchell"><p>I studied biology at Lewis &amp; Clark College, where I built my foundation in science. I’m passionate about conservation, water quality, and environmental restoration.</p><p>My master’s in teaching deepened my research skills and gave me experience collecting and analyzing qualitative and quantitative data. As a science educator, I tracked student progress throughout each school year and shared findings with students, families, and school leaders. I used those findings to evaluate programs and adjust instruction and support to improve student outcomes.</p><p>I love solving problems with others and learning from people who see things differently. I bring creativity and critical thinking to my projects and use Python, SQL, Tableau, and Excel to identify patterns, explore what might explain changes, and help organizations decide what to do next.</p></div></div><aside class="skills-card"><h3>Technical skills</h3><div class="skill-row"><strong>Languages</strong><span>SQL, Python</span></div><div class="skill-row"><strong>Analysis</strong><span>Quantitative and qualitative methods, data aggregation, calculations, and statistical analysis</span></div><div class="skill-row"><strong>Data preparation</strong><span>Python (pandas), Power Query, ETL, AWS Glue, MySQL, SQLite</span></div><div class="skill-row"><strong>BI &amp; visualization</strong><span>Tableau, Microsoft Excel, Matplotlib, Seaborn</span></div><details><summary>Education and training</summary><p>B.A. Biology, Lewis &amp; Clark College; Master of Science in Teaching; Instructional Design &amp; E-Learning Certificate, Oregon State University; Data Analytics training.</p></details></aside></div>
+<div class="outside"><div><h3>Outside of work</h3><p>I grew up in Bayfield, Wisconsin, on the shores of Lake Superior. Living beside its clear waters inspired me to pursue work that protects natural places and conserves the resources we depend on.</p><p>Near Portland, I look for hikes that wind through old-growth forests or lead to a waterfall. I also make pottery, paint with watercolors, and garden.</p><p>I enjoy board games and Dungeons &amp; Dragons, and I love learning new things, whether I’m trying a new glaze or figuring out a game I’ve never played.</p></div></div></div></section>
+<section class="contact-section" id="contact"><div class="wrap"><div class="contact-box"><div><div class="eyebrow">Contact</div><h2>Let’s connect.</h2><p>I’m interested in data analyst roles that use evidence to improve decisions and outcomes.</p></div><div class="contact-links"><a class="primary" href="mailto:chessae23@gmail.com">Email me ↗</a><a href="https://www.linkedin.com/in/chessa-mitchell/">LinkedIn ↗</a><a href="https://github.com/chessam23-stack">GitHub ↗</a></div></div></div></section></main><footer><div class="wrap">Chessa Mitchell · Data Analyst Portfolio</div></footer></body></html>
