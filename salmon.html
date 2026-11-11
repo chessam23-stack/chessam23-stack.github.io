@@ -112,6 +112,15 @@ h2{font-size:clamp(26px,3.2vw,38px);line-height:1.25}
 .dashboard-more{margin-top:25px;border-top:1px solid var(--line);padding-top:18px}
 .dashboard-more .dashboard{max-width:900px}
 @media(max-width:650px){.case-hero{padding:28px 0}.summary-section{padding:20px}.metric-grid,.workflow-grid{grid-template-columns:1fr}.case-title{font-size:clamp(30px,8vw,42px)}.links{flex-wrap:wrap;gap:12px 20px}.hero-tools{gap:6px}}
+</style><style>
+/* Case-study typography and featured visualization refinements */
+.case-title{font-size:clamp(25.5px,3.45vw,45px);letter-spacing:-.02em}
+section h2{font-size:clamp(19.5px,2.4vw,28.5px);line-height:1.3}
+.featured-visual{margin:0 0 34px;max-width:100%;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--white)}
+.featured-visual a{display:block}
+.featured-visual img{display:block;width:100%;height:auto}
+.featured-visual figcaption{padding:10px 16px;margin:0;font-size:13px}
+@media(max-width:650px){.case-title{font-size:clamp(22.5px,6vw,31.5px)}.featured-visual{margin-bottom:24px}}
 </style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -122,6 +131,7 @@ h2{font-size:clamp(26px,3.2vw,38px);line-height:1.25}
 <p class="intro">A statistical investigation of migration patterns and environmental conditions in Oregon’s Columbia and Willamette rivers.</p>
 <ul class="technical-skills-list hero-tools" aria-label="Technical skills"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Excel</li><li>Tableau</li></ul>
 <a class="button" href="https://public.tableau.com/app/profile/chessa.mitchell/viz/CM_Capstone_Salmon_dashboard_final/SalmonSpeciesComparisonPart1">Explore the interactive dashboard ↗</a></div>
+<figure class="featured-visual"><a href="https://public.tableau.com/app/profile/chessa.mitchell/viz/CM_Capstone_Salmon_dashboard_final/SalmonSpeciesComparisonPart1" target="_blank" rel="noopener noreferrer"><img src="assets/chinook-returns.png" alt="Tableau visualization of historical Chinook salmon returns at Bonneville Dam and Willamette Falls" fetchpriority="high"></a><figcaption>Explore the historical Chinook returns visualization. Select the image to open the interactive Tableau dashboard.</figcaption></figure>
 <section class="summary-section" aria-labelledby="summary-title"><p class="eyebrow">At a glance</p><h2 id="summary-title">Project overview</h2>
 <p class="summary-copy">I combined historical fish passage counts with Portland-area water quality records to investigate Chinook migration patterns and environmental conditions. Using Python for data preparation and statistical comparisons, I explored how annual returns varied across locations and whether water chemistry measurements were associated with those changes. I presented the results in an interactive Tableau dashboard. The analysis did not establish a statistically significant relationship between the examined annual water-quality measures and Chinook returns; differences in site coverage and aggregation limit causal interpretation.</p>
 <div class="metric-grid"><div class="metric"><strong>0.124</strong><span>Pearson r · annual Chinook counts at Bonneville and Willamette Falls, 1971–2024</span></div><div class="metric"><strong>0.028</strong><span>Approximate R² · exploratory water-quality relationship; not a causal estimate</span></div></div>
@@ -137,11 +147,11 @@ h2{font-size:clamp(26px,3.2vw,38px);line-height:1.25}
 <li>Use statistical analysis to identify trends and explore relationships between salmon returns and water quality variables.</li>
 </ol>
 </div>
-<div class="table-scroll"><table class="case-table"><thead><tr><th scope="col">Data</th><th scope="col">Locations and coverage</th><th scope="col">Purpose</th></tr></thead><tbody>
+<div class="table-scroll"><table class="case-table"><thead><tr><th scope="col">Objective</th><th scope="col">Locations and coverage</th><th scope="col">Purpose</th></tr></thead><tbody>
 <tr><th scope="row">Initial Pacific salmon species comparisons over time</th><td>Bonneville Dam, The Dalles Dam, and Willamette Falls; 10-year average returns for each species</td><td>Compare average returns and the proportion represented by each species at each location to select a species for deeper analysis. This exploration led to a focus on Chinook.</td></tr>
 <tr><th scope="row">Yearly Chinook returns</th><td>Bonneville Dam on the Columbia River and Willamette Falls on the Willamette River; shared comparison period 1971–2024</td><td>Compare annual Chinook returns between the two rivers using time-series visualizations, correlation analysis, and a baseline index. Examine whether returns rise and fall together, identify long-term trends, and compare the number of fish recorded at each location.</td></tr>
 <tr><th scope="row">Water chemistry and index scores</th><td>Hawthorne Bridge, Swan Island, Columbia Marker 47, and Columbia Slough; dashboard index view 2015–2025</td><td>Compare local conditions and explore relationships with returns over overlapping years.</td></tr>
-
+<tr><th scope="row">Statistical Analyses</th><td>Columbia River, Willamette River</td><td>Explore relationships between water quality patterns and fish population patterns.</td></tr>
 </tbody></table></div>
 <figure class="dashboard"><a href="assets/study-area.png" target="_blank" rel="noopener"><img src="assets/study-area.png" alt="Map of Portland-area fish counting and water sampling locations" loading="lazy"></a><figcaption>Dashboard map showing the study area and sampling locations. Select image to view full size.</figcaption></figure>
 </section>
